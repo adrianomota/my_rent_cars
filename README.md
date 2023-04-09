@@ -1,4 +1,4 @@
-https://github.com/adrianomota/my_rent_cars/actions/workflows/rent_car/badge.svg
+![RentCars Service](https://github.com/adrianomota/my_rent_cars/actions/workflows/rent_car.yml/badge.svg)
 
 # RentCars
 

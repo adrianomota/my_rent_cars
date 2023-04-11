@@ -21,10 +21,13 @@ defmodule RentCarsWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", RentCarsWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", RentCarsWeb do
+    pipe_through :api
 
+    get "/categories", CategoryController, :index
+  end
+
+  # coveralls-ignore-start
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:rent_cars, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
@@ -41,4 +44,6 @@ defmodule RentCarsWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  # coveralls-ignore-stop
 end
